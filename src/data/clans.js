@@ -1,0 +1,15 @@
+export const CLANS = [
+  { name: '幻海脉', icon: '🌬' },
+  { name: '仙国脉', icon: '🌍' },
+  { name: '召者脉', icon: '✨' },
+  { name: '太平脉', icon: '💫' },
+  { name: '神军脉', icon: '🌠' },
+  { name: '神机脉', icon: '⚡' },
+  { name: '星师脉', icon: '🔥' },
+  { name: '铸星一脉', icon: '⭐' },
+  { name: '梦脉', icon: '💧' },
+  { name: '鬼脉', icon: '🔥' },
+  { name: '战脉', icon: '⚡' },
+  { name: '魔脉', icon: '🌍' },
+  { name: '衍脉', icon: '🌩' },
+]

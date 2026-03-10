@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════
+   RESET & ROOT VARIABLES - STARRY THEME
+═══════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Starry color palette */
+  --star-light: #e0f7ff;
+  --star-bright: #00d4ff;
+  --star-cyan: #0099ff;
+  --star-purple: #9d4edd;
+  --star-deep: #0f1e3d;
+  --star-mid: #1a2744;
+  --star-light-mid: #2d3f5e;
+  
+  /* Legacy aliases for compatibility */
+  --gold: #00d4ff;
+  --gold-light: #e0f7ff;
+  --gold-dim: #0099ff;
+  --ink: #0a0f1e;
+  --ink-mid: #111830;
+  --ink-light: #1a2844;
+  --jade: #00d4ff;
+  --jade-dim: #0066aa;
+  --crimson: #ff6b9d;
+  --silver: #00d4ff;
+  --panel-bg: rgba(26, 40, 68, 0.65);
+  --panel-border: rgba(0, 212, 255, 0.25);
+  --text-main: #e0f7ff;
+  --text-dim: #7da9cc;
+  --radius: 10px;
+  --trans: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Ma Shan Zheng', '微软雅黑', 'STKaiti', serif;
+  background: var(--ink);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════════
+   STAR CANVAS
+═══════════════════════════════════════════════ */
+#star-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════
+   APP SHELL
+═══════════════════════════════════════════════ */
+#app {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════
+   PAGE TRANSITIONS
+═══════════════════════════════════════════════ */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+/* ═══════════════════════════════════════════════
+   PAGE WRAPPER
+═══════════════════════════════════════════════ */
+.page-bg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.page-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 15, 30, 0.6);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: var(--star-light);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6), 0 0 40px rgba(157, 78, 221, 0.4);
+  margin-bottom: 8px;
+}
+
+.page-title .subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+}
+
+/* ═══════════════════════════════════════════════
+   FAIRY TEXT
+═══════════════════════════════════════════════ */
+.fairy-text {
+  font-size: 18px;
+  line-height: 2;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.fairy-text p {
+  margin: 12px 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 212, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.6);
+}
